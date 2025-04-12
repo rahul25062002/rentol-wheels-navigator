@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Star, Users, Gauge, GasPump, Cog } from 'lucide-react';
+import { Star, Users, Gauge, Fuel, Cog } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // Car data
@@ -99,7 +99,7 @@ const FeaturedCars = () => {
                     <span>Unlimited</span>
                   </div>
                   <div className="flex items-center text-gray-600 text-sm">
-                    <GasPump className="w-4 h-4 mr-1" />
+                    <Fuel className="w-4 h-4 mr-1" />
                     <span>{car.fuel}</span>
                   </div>
                 </div>
