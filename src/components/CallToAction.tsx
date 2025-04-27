@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 
 const CallToAction = () => {
   return (
-    <section className="py-16 bg-rentol-blue text-white relative overflow-hidden">
+    <section className="py-16 bg-rentol-blue text-white relative overflow-hidden" id='call-to-action'>
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
       
@@ -21,7 +21,7 @@ const CallToAction = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="bg-rentol-orange hover:bg-rentol-orange/90 text-white">
+              <Button className="bg-rentol-orange hover:bg-rentol-orange/90 text-white" onClick={() => window.open('https://wa.me/917870807536', '_blank')}>
                 Book a Car Now
               </Button>
               <div className="flex items-center">

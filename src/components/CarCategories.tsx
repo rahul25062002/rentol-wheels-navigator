@@ -31,7 +31,7 @@ const categories = [
 
 const CarCategories = () => {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-white" id="car-categories">
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Browse By Category</h2>

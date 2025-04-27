@@ -103,3 +103,26 @@
     @apply text-sm md:text-base text-gray-600 mt-2 mb-8;
   }
 }
+
+.what-app{
+  position: fixed;
+  right: 1vw;
+  bottom: 5vw;
+  animation: jump 1s infinite; 
+  z-index: 100;
+}
+@keyframes jump {
+   0% ,50%,100%{
+      transform: translateY(0);
+   }
+   40%{
+      transform: translateY(-60px);
+   }
+   70%{
+      transform: translateY(
+          -30px
+      );
+   }
+
+
+}

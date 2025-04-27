@@ -53,7 +53,7 @@ const featuredCars = [
 
 const FeaturedCars = () => {
   return (
-    <section className="py-16 bg-rentol-light-gray">
+    <section className="py-16 bg-rentol-light-gray" id='featured-cars'>
       <div className="container-custom">
         <div className="text-center mb-12">
           <h2 className="section-title">Featured Vehicles</h2>
@@ -116,12 +116,6 @@ const FeaturedCars = () => {
               </div>
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-10">
-          <Button className="bg-rentol-orange hover:bg-rentol-orange/90 text-white">
-            View All Vehicles
-          </Button>
         </div>
       </div>
     </section>

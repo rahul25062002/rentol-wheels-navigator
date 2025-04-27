@@ -5,7 +5,7 @@ import { MapPin, Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'luc
 
 const Footer = () => {
   return (
-    <footer className="bg-rentol-blue text-white pt-16 pb-8">
+    <footer className="bg-rentol-blue text-white pt-16 pb-8" id='footer'>
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -101,6 +101,8 @@ const Footer = () => {
           <p className="text-gray-400">
             &copy; {new Date().getFullYear()} Rentol Car Rental. All rights reserved.
           </p>
+          <p className="text-gray-400 mt-2">
+            Designed & Developed by <a href="https://www.linkedin.com/in/kanchigupta183/" className="text-rentol-orange hover:underline">Kanchi Gupta</a></p>
         </div>
       </div>
     </footer>

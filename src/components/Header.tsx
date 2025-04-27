@@ -5,6 +5,12 @@ import { Phone, Mail, Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
+
+  const handleScroll = (location) => {
+    const el = document.getElementById(location);
+    if (el) el.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -12,7 +18,7 @@ const Header = () => {
   };
 
   return (
-    <header className="w-full">
+    <header className="w-full" id='header'>
       {/* Top bar */}
       <div className="bg-rentol-blue text-white py-2 hidden md:block">
         <div className="container-custom flex justify-between items-center">
@@ -27,8 +33,7 @@ const Header = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <Link to="/login" className="text-sm hover:text-rentol-orange transition-colors">Sign In</Link>
-            <Link to="/register" className="text-sm hover:text-rentol-orange transition-colors">Register</Link>
+           
           </div>
         </div>
       </div>
@@ -42,15 +47,14 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-6">
-            <Link to="/" className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors">Home</Link>
-            <Link to="/about" className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors">About</Link>
-            <Link to="/cars" className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors">Cars</Link>
-            <Link to="/services" className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors">Services</Link>
-            <Link to="/contact" className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors">Contact</Link>
+            <span  className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors" onClick={() => handleScroll('about')} >About</span>
+            <span className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors" onClick={() => handleScroll('featured-cars')} >Cars</span>
+            <span  className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors" onClick={() => handleScroll('car-categories')} >Services</span>
+            <span  className="font-medium text-rentol-blue hover:text-rentol-orange transition-colors" onClick={() => handleScroll('contact')} >Contact</span>
           </nav>
           
           <div className="hidden md:block">
-            <Button className="bg-rentol-orange hover:bg-rentol-orange/90 text-white">
+            <Button className="bg-rentol-orange hover:bg-rentol-orange/90 text-white"  onClick={() => window.open('https://wa.me/917870807536', '_blank')}>
               Book Now
             </Button>
           </div>

@@ -7,6 +7,8 @@ import CarCategories from '@/components/CarCategories';
 import Features from '@/components/Features';
 import CallToAction from '@/components/CallToAction';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
+import AboutSection from "@/components/AboutSection";
 
 const Index = () => {
   return (
@@ -14,10 +16,12 @@ const Index = () => {
       <Header />
       <main className="flex-grow">
         <HeroSection />
-        <Features />
+        <AboutSection />
         <FeaturedCars />
+        <Features />
         <CarCategories />
         <CallToAction />
+        <ContactForm />
       </main>
       <Footer />
     </div>
